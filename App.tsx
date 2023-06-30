@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { useEffect, useState } from 'react';
 import NetInfo from '@react-native-community/netinfo';
 
@@ -8,6 +9,7 @@ import Constants from 'expo-constants';
 import * as Network from 'expo-network';
 import * as SplashScreen from 'expo-splash-screen';
 import { Asset } from 'expo-asset';
+import { Roboto_400Regular } from '@expo-google-fonts/roboto';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Entypo from '@expo/vector-icons/Entypo';
@@ -63,7 +65,7 @@ export default function App() {
         // Pre-load images, make any API calls you need to do here
         await Asset.loadAsync([]);
         // Pre-load fonts, make any API calls you need to do here
-        await Font.loadAsync({ ...Entypo.font });
+        await Font.loadAsync({ ...Entypo.font, Roboto_400Regular });
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
         await new Promise((resolve) => setTimeout(resolve, 2000));

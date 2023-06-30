@@ -12,6 +12,7 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   plugins: ['react', 'jsx-a11y', 'jest', 'jest-dom', 'testing-library', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
@@ -48,9 +49,20 @@ module.exports = {
     'react/style-prop-object': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.tsx', '.ts'],
+      },
+    ],
     'no-promise-executor-return': 'off', // TODO: remove this rule and fix all errors
     '@typescript-eslint/no-explicit-any': 'off', // TODO: remove this rule and fix all errors
+    '@typescript-eslint/no-var-requires': 'off', // TODO: remove this rule and fix all errors
   },
 };

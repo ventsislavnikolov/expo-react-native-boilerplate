@@ -1,31 +1,69 @@
-name: Test, Build, Deploy and Release
+name: Test, Build and Release
 
 on:
  push:
-   branches: [ main, master ]
+   branches: [ main ]
  pull_request:
-   branches: [ main, master ]
+   branches: [ main ]
 
 jobs:
-  test:
-    name: Test
+  check:
+    name: Lint, Format, Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "use node ${{ env.node_version }}"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.node_version }}"
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint check
+        run: yarn lint
+
+      - name: Format check
+        run: yarn prettier
+
+      - name: Unit & Integration tests
+        run: yarn test:ci
+
+      - name: Install concurrently
+        run: npm install -g concurrently
+
+      - name: Install wait-on
+        run: npm install -g wait-on
+
+      - name: Smoke & Acceptance tests
+        run: |
+          yarn build-storybook --quiet
+            npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+              "npx http-server storybook-static --port 6006 --silent" \
+              "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
+  build:
+    name: Build
+    needs: check
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "use node ${{ env.node_version }}"
+        uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: "${{ env.node_version }}"
 
       - name: Install dependencies
-        run: yarn
+        run: yarn install
 
-      - name: Test
-        run: yarn test
+      - name: Build
+        run: yarn build
 
   release:
     name: Release
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
 
     permissions:
@@ -33,18 +71,15 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
+      - uses: actions/checkout@v3
+      - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "use node ${{ env.node_version }}"
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: "${{ env.node_version }}"
 
       - name: Install dependencies
-        run: npm pkg delete scripts.prepare && rm -rf .husky/.pre-push && yarn
+        run: npm pkg delete scripts.prepare && rm -rf .husky/.pre-push && yarn install
 
       - name: Release
         env:

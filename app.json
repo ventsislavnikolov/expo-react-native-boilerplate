@@ -18,26 +18,32 @@
     "ios": {
       "supportsTablet": true,
       "userInterfaceStyle": "automatic",
-      "bundleIdentifier": "expo.react-native-boilerplate",
-      "buildNumber": "1"
+      "bundleIdentifier": "ventsislavnikolov.expo",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSContactsUsageDescription": "Allowing access to your contacts will enable you to send SOS signal to emergency contacts."
+      }
     },
     "android": {
-      "package": "expo.react-native-boilerplate",
+      "package": "ventsislavnikolov.expo",
       "versionCode": 1,
       "userInterfaceStyle": "automatic",
-      "useNextNotificationsApi": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "sentryDns": "",
+      "sentryDns": "https://add4d84921d140aa89172c46c4a522bc@o1214977.ingest.sentry.io/4505448122679296",
       "eas": {
-        "projectId": ""
+        "projectId": "65bfd5f8-08a5-4fc1-8938-097639c34225"
       }
     },
     "plugins": [
@@ -55,8 +61,8 @@
         {
           "file": "sentry-expo/upload-sourcemaps",
           "config": {
-            "organization": "",
-            "project": ""
+            "organization": "ventsislavnikolov",
+            "project": "expo-react-native-boilerplate"
           }
         }
       ]
