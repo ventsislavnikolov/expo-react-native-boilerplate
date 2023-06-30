@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "expo-react-native-boilerplate",
+    "slug": "expo-react-native-boilerplate",
+    "scheme": "expo-react-native-boilerplate",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "userInterfaceStyle": "automatic",
+      "bundleIdentifier": "expo.react-native-boilerplate",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "expo.react-native-boilerplate",
+      "versionCode": 1,
+      "userInterfaceStyle": "automatic",
+      "useNextNotificationsApi": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "sentryDns": "",
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "plugins": [
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allowing access to your contacts will enable you to send SOS signal to emergency contacts."
+        }
+      ],
+      "sentry-expo",
+      "expo-localization"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "",
+            "project": ""
+          }
+        }
+      ]
+    }
+  }
+}
