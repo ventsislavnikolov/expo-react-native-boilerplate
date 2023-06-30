@@ -18,3 +18,5 @@ web-build/
 coverage
 graph.svg
 .env
+build-storybook.log
+storybook-static

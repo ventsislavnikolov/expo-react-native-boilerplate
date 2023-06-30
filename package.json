@@ -4,14 +4,16 @@
   "private": true,
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
-  "author": "Ventsislav Nikolov",
+  "author": {
+    "name": "Ventsislav Nikolov"
+  },
   "homepage": "https://github.com/ventsislavnikolov/expo-react-native-boilerplate#readme",
   "bugs": {
     "url": "https://github.com/ventsislavnikolov/expo-react-native-boilerplate"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ventsislavnikolov/expo-react-native-boilerplate.git"
+    "url": "git+https://github.com/ventsislavnikolov/expo-react-native-boilerplate.git"
   },
   "scripts": {
     "test": "jest",
@@ -31,6 +33,7 @@
     "commitlint": "npx --no -- commitlint --edit",
     "analyze": "EXPO_WEB_DEBUG=true npx expo export:web",
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "build:ios:development": "eas build --profile development --platform ios",
     "build:android:development": "eas build --profile development --platform android",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -104,6 +107,7 @@
     "@storybook/blocks": "7.0.24",
     "@storybook/react": "7.0.24",
     "@storybook/react-webpack5": "7.0.24",
+    "@storybook/test-runner": "^0.11.0",
     "@storybook/testing-library": "0.0.14-next.2",
     "@testing-library/jest-native": "^5.4.2",
     "@testing-library/react-native": "^12.1.2",
@@ -113,6 +117,7 @@
     "@types/react-dom": "~18.0.10",
     "@types/react-native": "~0.70.6",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "chromatic": "^6.19.9",
     "eslint": "^8.42.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
@@ -134,10 +139,12 @@
     "semantic-release": "^21.0.3",
     "semantic-release-ado": "^1.4.0",
     "storybook": "7.0.24",
-    "storybook-addon-designs": "^6.3.1",
+    "storybook-addon-designs": "^7.0.0-beta.2",
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.1.0",
     "typescript": "^4.6.3",
     "webpack-bundle-analyzer": "^4.9.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "expo-react-native-boilerplate@0.0.0"
 }
