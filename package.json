@@ -1,6 +1,6 @@
 {
   "name": "expo-react-native-boilerplate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
@@ -21,7 +21,6 @@
     "test:ci": "jest --ci",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "prepare": "husky install",
     "test:watch": "jest --watch",
     "lint-staged": "pnpx lint-staged",
     "android": "expo start --android",
@@ -145,6 +144,5 @@
     "typescript": "^4.6.3",
     "webpack-bundle-analyzer": "^4.9.0"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "expo-react-native-boilerplate@0.0.0"
+  "readme": "ERROR: No README data found!"
 }
