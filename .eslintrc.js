@@ -40,15 +40,16 @@ module.exports = {
     },
   },
   rules: {
-    'no-undef': 'off',
-    'global-require': 'off',
-    'react/prop-types': 'off',
-    'import/extensions': 'off',
-    'import/no-unresolved': 'off',
-    'no-use-before-define': 'off',
-    'react/style-prop-object': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-props-no-spreading': 'off',
+    'no-undef': 'off', // TODO: remove this rule and fix all errors
+    'func-names': 'off', // TODO: remove this rule and fix all errors
+    'global-require': 'off', // TODO: remove this rule and fix all errors
+    'react/prop-types': 'off', // TODO: remove this rule and fix all errors
+    'import/extensions': 'off', // TODO: remove this rule and fix all errors
+    'import/no-unresolved': 'off', // TODO: remove this rule and fix all errors
+    'no-use-before-define': 'off', // TODO: remove this rule and fix all errors
+    'react/style-prop-object': 'off', // TODO: remove this rule and fix all errors
+    'react/react-in-jsx-scope': 'off', // TODO: remove this rule and fix all errors
+    'react/jsx-props-no-spreading': 'off', // TODO: remove this rule and fix all errors
     'import/no-extraneous-dependencies': [
       'error',
       {

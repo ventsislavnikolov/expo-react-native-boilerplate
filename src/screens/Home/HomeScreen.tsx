@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
+
+import { Text, View, Button } from 'react-native';
+import { styled } from 'nativewind';
 
 // Expo imports
 import * as SplashScreen from 'expo-splash-screen';
@@ -8,10 +10,18 @@ import * as SplashScreen from 'expo-splash-screen';
 // Redux imports
 import { useGetAbilityQuery } from 'store/services/applicationApi';
 
+const StyledView = styled(View);
+const StyledText = styled(Text);
+const StyledButton = styled(Button);
+
 export default function HomeScreen({ route }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const { isLoading } = useGetAbilityQuery({ limit: 20, offset: 0 });
+
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'ena' : 'en');
+  };
 
   useEffect(() => {
     const hideSplashScreen = async () => {
@@ -24,17 +34,9 @@ export default function HomeScreen({ route }) {
   }, [route.params.appIsReady, isLoading]);
 
   return (
-    <View style={styles.container}>
-      <Text>{t('home.hello')}</Text>
-    </View>
+    <StyledView className='flex-1 items-center justify-center'>
+      <StyledText className='text-slate-800'>{t('home.hello')}</StyledText>
+      <StyledButton title='Change Language' onPress={changeLanguage} />
+    </StyledView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
-    justifyContent: 'center',
-  },
-});
