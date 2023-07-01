@@ -21,6 +21,7 @@
     "test:ci": "jest --ci",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "prepare": "husky install",
     "test:watch": "jest --watch",
     "lint-staged": "pnpx lint-staged",
     "android": "expo start --android",
