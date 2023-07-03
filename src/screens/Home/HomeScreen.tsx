@@ -34,8 +34,8 @@ export default function HomeScreen({ route }) {
   }, [route.params.appIsReady, isLoading]);
 
   return (
-    <StyledView className='flex-1 items-center justify-center'>
-      <StyledText className='text-slate-800'>{t('home.hello')}</StyledText>
+    <StyledView className='flex-1 items-center justify-center bg-white dark:bg-slate-800'>
+      <StyledText className='text-slate-800 dark:text-white'>{t('home.hello')}</StyledText>
       <StyledButton title='Change Language' onPress={changeLanguage} />
     </StyledView>
   );
