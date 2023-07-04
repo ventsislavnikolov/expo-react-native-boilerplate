@@ -3,7 +3,8 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      ['nativewind/babel', { mode: 'transformOnly' }],
+      'nativewind/babel',
+      '@babel/plugin-transform-modules-commonjs',
       [
         'module-resolver',
         {
