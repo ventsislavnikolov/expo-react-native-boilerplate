@@ -48,6 +48,21 @@
     },
     "plugins": [
       [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0",
+            "kotlinVersion": "1.7.10"
+          },
+          "ios": {
+            "deploymentTarget": "13.0",
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
         "expo-contacts",
         {
           "contactsPermission": "Allowing access to your contacts will enable you to send SOS signal to emergency contacts."
