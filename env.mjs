@@ -1,21 +1,23 @@
-import { createEnv } from '@t3-oss/env-nextjs';
-import { z } from 'zod';
+const { createEnv } = require('@t3-oss/env-core');
+const { z } = require('zod');
 
 const env = createEnv({
   server: {
-    NEXT_PUBLIC_API_URL: z.string().optional(),
-    CHROMATIC_PROJECT_TOKEN: z.string().optional(),
-    NODE_ENV: z.enum(['development', 'test', 'production']).optional(),
     ANALYZE: z
       .enum(['true', 'false'])
       .optional()
       .transform((value) => value === 'true'),
+    SENTRY_DSN: z.string().optional(),
+    NEXT_PUBLIC_API_URL: z.string().optional(),
+    CHROMATIC_PROJECT_TOKEN: z.string().optional(),
+    NODE_ENV: z.enum(['development', 'test', 'production']).optional(),
   },
   client: {},
   runtimeEnv: {
     ANALYZE: process.env.ANALYZE,
     NODE_ENV: process.env.NODE_ENV,
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    SENTRY_DSN: process.env.SENTRY_DSN,
+    BACKEND_API: process.env.BACKEND_API,
     CHROMATIC_PROJECT_TOKEN: process.env.CHROMATIC_PROJECT_TOKEN,
   },
 });

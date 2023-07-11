@@ -35,7 +35,15 @@
     "forceConsistentCasingInFileNames": true
   },
   "types": ["node", "jest", "@testing-library/jest-dom"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs", "src", "tests/unit/App.test.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    "src",
+    "tests/unit/App.test.ts",
+    "env.mjs"
+  ],
   "exclude": ["node_modules"],
   "extends": "expo/tsconfig.base"
 }

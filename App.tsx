@@ -35,7 +35,7 @@ if (!__DEV__) {
   });
 
   Sentry.init({
-    dsn: Constants.manifest?.extra?.sentryDsn,
+    dsn: Constants.manifest?.extra?.sentryDns,
     tracesSampleRate: 1.0,
     integrations: [
       new Sentry.Native.ReactNativeTracing({
