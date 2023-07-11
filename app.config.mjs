@@ -39,11 +39,9 @@ export default {
       favicon: './assets/favicon.png',
     },
     extra: {
+      eas: env.EAS_PROJECT_ID,
       sentryDns: env.SENTRY_DNS,
       backendApi: env.BACKEND_API,
-      eas: {
-        projectId: '65bfd5f8-08a5-4fc1-8938-097639c34225',
-      },
     },
     plugins: [
       [

@@ -8,6 +8,7 @@ const env = createEnv({
       .optional()
       .transform((value) => value === 'true'),
     SENTRY_DSN: z.string().optional(),
+    EAS_PROJECT_ID: z.string().optional(),
     NEXT_PUBLIC_API_URL: z.string().optional(),
     CHROMATIC_PROJECT_TOKEN: z.string().optional(),
     NODE_ENV: z.enum(['development', 'test', 'production']).optional(),
@@ -18,6 +19,7 @@ const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     SENTRY_DSN: process.env.SENTRY_DSN,
     BACKEND_API: process.env.BACKEND_API,
+    EAS_PROJECT_ID: process.env.EAS_PROJECT_ID,
     CHROMATIC_PROJECT_TOKEN: process.env.CHROMATIC_PROJECT_TOKEN,
   },
 });
