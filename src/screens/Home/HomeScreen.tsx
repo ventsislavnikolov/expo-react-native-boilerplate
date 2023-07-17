@@ -20,7 +20,7 @@ export default function HomeScreen({ route }) {
   const { isLoading } = useGetAbilityQuery({ limit: 20, offset: 0 });
 
   const changeLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ena' : 'en');
+    i18n.changeLanguage(i18n.language === 'en' ? 'en' : 'en');
   };
 
   useEffect(() => {
