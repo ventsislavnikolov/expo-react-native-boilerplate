@@ -8,7 +8,8 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
+        "EXPO_PUBLIC_API_URL": "https://api.example.com",
+        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225"
       }
     },
     "development-simulator": {
@@ -19,20 +20,23 @@
         "simulator": true
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
+        "EXPO_PUBLIC_API_URL": "https://api.example.com",
+        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225"
       }
     },
     "preview": {
       "node": "18.16.0",
       "distribution": "internal",
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
+        "EXPO_PUBLIC_API_URL": "https://api.example.com",
+        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225"
       }
     },
     "production": {
       "node": "18.16.0",
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
+        "EXPO_PUBLIC_API_URL": "https://api.example.com",
+        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225"
       }
     }
   },

@@ -56,7 +56,6 @@
     "@react-navigation/native-stack": "^6.9.13",
     "@reduxjs/toolkit": "^1.9.5",
     "@sentry/react-native": "4.15.2",
-    "@t3-oss/env-core": "^0.6.0",
     "expo": "~48.0.18",
     "expo-app-loading": "^2.1.1",
     "expo-application": "~5.1.1",
