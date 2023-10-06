@@ -17,8 +17,9 @@ module.exports = {
   moduleDirectories: ['node_modules', 'src'],
   collectCoverage: true,
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
+    '**/*.{ts,tsx}',
     '!**/coverage/**',
+    '!**/storybook-static/**',
     '!**/node_modules/**',
     '!**/web-build/**',
     '!**/.storybook/**',
@@ -36,6 +37,7 @@ module.exports = {
     '!**/jest.config.js',
     '!**/tailwind.config.js',
     '!**/mock-async-storage.js',
+    '!**/app.config.js',
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?@?react-native|unimodules-permissions-interface|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|@sentry/react-native|@sentry/core|@expo-google-fonts|native-base)',
