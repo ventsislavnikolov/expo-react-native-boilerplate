@@ -3,10 +3,14 @@ import { vneslint } from '@ventsislavnikolov/eslint-config';
 export default vneslint(
   [
     {
-      ignores: [],
+      ignores: ['node_modules', 'dist', 'build', 'coverage', 'public', 'storybook-static'],
     },
     {
       files: ['**/src/**/*.ts', '**/src/**/*.tsx'],
+      languageOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
       rules: {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
