@@ -1,10 +1,9 @@
-import * as Localization from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Localization from 'expo-localization';
 
 const languageDetector: any = {
-  type: 'languageDetector',
   async: true,
-  init: () => {},
+  cacheUserLanguage: () => {},
   detect: async (callback) => {
     await AsyncStorage.getItem('language', (err, lng) => {
       if (err || !lng) {
@@ -16,7 +15,8 @@ const languageDetector: any = {
       callback(lng);
     });
   },
-  cacheUserLanguage: () => {},
+  init: () => {},
+  type: 'languageDetector',
 };
 
 export default languageDetector;

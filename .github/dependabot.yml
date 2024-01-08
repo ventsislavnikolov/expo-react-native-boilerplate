@@ -5,18 +5,25 @@
 
 version: 2
 updates:
-  - package-ecosystem: "yarn"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 99
+    reviewers:
+      - ventsislavnikolov
+
+  - package-ecosystem: "npm"
+    directory: /
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 50
+    open-pull-requests-limit:  20
+    versioning-strategy: increase
+    reviewers:
+      - ventsislavnikolov
     commit-message:
       prefix: "chore"
       include: "scope"
     ignore:
      # ignore all GitHub linguist patch updates
-      - dependency-name: "@sentry/react-native"
-      - dependency-name: "sentry-expo"
-      - dependency-name: "react-native"
-      - dependency-name: "@babel/core"
-      - dependency-name: "husky"
+     # - dependency-name: "husky"

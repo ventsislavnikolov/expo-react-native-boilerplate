@@ -1,59 +1,59 @@
 const palette = {
   background: {
-    paper: '#fcfcfc',
     default: '#000',
+    paper: '#fcfcfc',
   },
   common: {
-    white: '#fff',
     black: '#000',
-  },
-  grey: {
-    light: '#E0E0E0',
-    main: '',
-    dark: '#EBEBEB',
-  },
-  primary: {
-    light: '',
-    main: '#e8515e',
-    dark: '',
-    contrastText: '',
-  },
-  secondary: {
-    light: '',
-    main: '',
-    dark: '',
-    contrastText: '',
+    white: '#fff',
   },
   error: {
+    contrastText: '',
+    dark: '',
     light: '',
     main: '',
-    dark: '',
-    contrastText: '',
   },
-  warning: {
-    light: '',
+  grey: {
+    dark: '#EBEBEB',
+    light: '#E0E0E0',
     main: '',
-    dark: '',
-    contrastText: '',
   },
   info: {
+    contrastText: '',
+    dark: '',
     light: '',
     main: '',
-    dark: '',
+  },
+  primary: {
     contrastText: '',
+    dark: '',
+    light: '',
+    main: '#e8515e',
+  },
+  secondary: {
+    contrastText: '',
+    dark: '',
+    light: '',
+    main: '',
   },
   success: {
+    contrastText: '',
+    dark: '',
     light: '',
     main: '',
-    dark: '',
-    contrastText: '',
   },
   text: {
+    disabled: '',
+    grey: '',
+    hint: '',
     primary: '',
     secondary: '',
-    disabled: '',
-    hint: '',
-    grey: '',
+  },
+  warning: {
+    contrastText: '',
+    dark: '',
+    light: '',
+    main: '',
   },
 };
 

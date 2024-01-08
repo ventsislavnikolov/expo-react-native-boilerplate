@@ -7,13 +7,13 @@ const baseQuery = fetchBaseQuery({
 });
 
 const applicationApi = createApi({
-  reducerPath: 'applicationApi',
   baseQuery,
   endpoints: (builder) => ({
     getAbility: builder.query({
       query: (params) => `ability/?limit=${params.limit}&offset=${params.offset}`,
     }),
   }),
+  reducerPath: 'applicationApi',
 });
 
 export const { useGetAbilityQuery } = applicationApi;

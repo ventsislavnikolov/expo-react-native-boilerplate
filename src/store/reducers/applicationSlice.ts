@@ -5,8 +5,8 @@ const initialState = {
 };
 
 const applicationSlice = createSlice({
-  name: 'application',
   initialState,
+  name: 'application',
   reducers: {
     setAbilities: (state, action) => ({ ...state, abilities: action.payload }),
   },

@@ -1,6 +1,7 @@
-module.exports = {
-  darkMode: 'class',
-  content: ['./App.{js,jsx,ts,tsx}', './src/**/*.{ts,tsx,js,jsx,mdx}'],
+export default {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  plugins: [],
+  presets: [require('nativewind/preset')],
   theme: {
     extend: {
       colors: {
@@ -9,10 +10,9 @@ module.exports = {
         success: '#38a169',
       },
       fontFamily: {
-        title: ['Roboto'],
         text: ['Roboto'],
+        title: ['Roboto'],
       },
     },
   },
-  plugins: [],
 };

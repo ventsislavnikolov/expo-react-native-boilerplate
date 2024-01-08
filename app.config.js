@@ -1,58 +1,58 @@
-module.exports = ({ config }) => ({
-  name: config.name,
-  slug: config.slug,
-  scheme: config.scheme,
-  version: '0.0.0',
-  orientation: 'portrait',
-  icon: './assets/icon.png',
-  userInterfaceStyle: 'automatic',
-  splash: {
-    image: './assets/splash.png',
-    resizeMode: 'contain',
-    backgroundColor: '#ffffff',
+export default ({ config }) => ({
+  android: {
+    adaptiveIcon: {
+      backgroundColor: '#ffffff',
+      foregroundImage: './assets/adaptive-icon.png',
+    },
+    package: 'ventsislavnikolov.expo',
+    permissions: ['android.permission.READ_CONTACTS', 'android.permission.WRITE_CONTACTS'],
+    userInterfaceStyle: 'automatic',
+    versionCode: 1,
   },
   assetBundlePatterns: ['**/*'],
-  ios: {
-    supportsTablet: true,
-    userInterfaceStyle: 'automatic',
-    bundleIdentifier: 'ventsislavnikolov.expo',
-    buildNumber: '1',
-    infoPlist: {
-      NSContactsUsageDescription:
-        'Allowing access to your contacts will enable you to send SOS signal to emergency contacts.',
-    },
-  },
-  android: {
-    package: 'ventsislavnikolov.expo',
-    versionCode: 1,
-    userInterfaceStyle: 'automatic',
-    adaptiveIcon: {
-      foregroundImage: './assets/adaptive-icon.png',
-      backgroundColor: '#ffffff',
-    },
-    permissions: ['android.permission.READ_CONTACTS', 'android.permission.WRITE_CONTACTS'],
-  },
-  web: {
-    favicon: './assets/favicon.png',
-  },
   extra: {
     eas: {
       projectId: process.env.EAS_PROJECT_ID,
       publicApi: process.env.EXPO_PUBLIC_API_URL,
     },
+    sentryDns: process.env.SENTRY_DNS,
   },
+  hooks: {
+    postPublish: [
+      {
+        config: {
+          organization: 'ventsislavnikolov',
+          project: 'expo-react-native-boilerplate',
+        },
+        file: 'sentry-expo/upload-sourcemaps',
+      },
+    ],
+  },
+  icon: './assets/icon.png',
+  ios: {
+    buildNumber: '1',
+    bundleIdentifier: 'ventsislavnikolov.expo',
+    infoPlist: {
+      NSContactsUsageDescription:
+        'Allowing access to your contacts will enable you to send SOS signal to emergency contacts.',
+    },
+    supportsTablet: true,
+    userInterfaceStyle: 'automatic',
+  },
+  name: config.name,
+  orientation: 'portrait',
   plugins: [
     [
       'expo-build-properties',
       {
         android: {
-          compileSdkVersion: 33,
-          targetSdkVersion: 33,
           buildToolsVersion: '33.0.0',
+          compileSdkVersion: 33,
           kotlinVersion: '1.7.10',
+          targetSdkVersion: 33,
         },
         ios: {
-          deploymentTarget: '13.0',
+          deploymentTarget: '13.4',
           useFrameworks: 'static',
         },
       },
@@ -64,18 +64,25 @@ module.exports = ({ config }) => ({
           'Allowing access to your contacts will enable you to send SOS signal to emergency contacts.',
       },
     ],
+    [
+      'expo-font',
+      {
+        fonts: 'node_modules/@expo-google-fonts/roboto/Roboto_400Regular.ttf',
+      },
+    ],
     'sentry-expo',
     'expo-localization',
   ],
-  hooks: {
-    postPublish: [
-      {
-        file: 'sentry-expo/upload-sourcemaps',
-        config: {
-          organization: 'ventsislavnikolov',
-          project: 'expo-react-native-boilerplate',
-        },
-      },
-    ],
+  scheme: config.scheme,
+  slug: config.slug,
+  splash: {
+    backgroundColor: '#ffffff',
+    image: './assets/splash.png',
+    resizeMode: 'contain',
+  },
+  userInterfaceStyle: 'automatic',
+  version: '0.0.0',
+  web: {
+    favicon: './assets/favicon.png',
   },
 });

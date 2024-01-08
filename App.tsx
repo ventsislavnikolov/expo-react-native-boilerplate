@@ -1,32 +1,21 @@
-/* eslint-disable camelcase */
 import { useEffect, useState } from 'react';
 import NetInfo from '@react-native-community/netinfo';
-
-// Expo imports
+import { LogBox } from 'react-native';
 import * as Font from 'expo-font';
 import * as Sentry from 'sentry-expo';
 import Constants from 'expo-constants';
 import * as Network from 'expo-network';
 import * as SplashScreen from 'expo-splash-screen';
 import { Asset } from 'expo-asset';
-import { Roboto_400Regular } from '@expo-google-fonts/roboto';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
-import Entypo from '@expo/vector-icons/Entypo';
-
-// import redux store
+import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import { Provider } from 'react-redux';
-
-// Redux imports
 import { store } from 'store';
-
-// Import navigation
+import 'translations';
+import './global.css';
 import { RootStackNavigator } from 'navigation';
 
-// Translations imports
-import 'translations';
+LogBox.ignoreLogs(['[Reanimated]']);
 
-// Init Sentry in production
 if (!__DEV__) {
   const devServerPort = 8081;
   let devServerIpAddress = '';
@@ -35,7 +24,7 @@ if (!__DEV__) {
   });
 
   Sentry.init({
-    dsn: Constants.manifest?.extra?.sentryDns,
+    dsn: Constants.expoConfig?.extra?.sentryDns,
     tracesSampleRate: 1.0,
     integrations: [
       new Sentry.Native.ReactNativeTracing({
@@ -46,13 +35,16 @@ if (!__DEV__) {
   });
 }
 
-// Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const [state, setState] = useState({
     appIsReady: false,
     isConnected: null,
+  });
+
+  const [fontsLoaded, fontError] = useFonts({
+    Roboto_400Regular,
   });
 
   const handleLoadingError = (error) => {
@@ -65,25 +57,27 @@ export default function App() {
         // Pre-load images, make any API calls you need to do here
         await Asset.loadAsync([]);
         // Pre-load fonts, make any API calls you need to do here
-        await Font.loadAsync({ ...Entypo.font, Roboto_400Regular });
+        await Font.loadAsync({});
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (e) {
         handleLoadingError(e);
       } finally {
         // Tell the application to render
-        NetInfo.fetch().then((netInfostate: any) => {
-          setState({
-            appIsReady: true,
-            isConnected: netInfostate.isConnected,
+        if (fontsLoaded && !fontError) {
+          NetInfo.fetch().then((netInfostate: any) => {
+            setState({
+              appIsReady: true,
+              isConnected: netInfostate.isConnected,
+            });
           });
-        });
+        }
       }
     }
 
     prepare();
-  }, []);
+  }, [fontsLoaded]);
 
   if (!state.appIsReady) {
     return null;

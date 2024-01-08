@@ -9,16 +9,16 @@ export const OS_TYPES = { ANDROID: 'android', IOS: 'ios' };
 export const DEFAULT = 'Default';
 export const NOTIFICATION = 'Notification';
 export const NOTIFICATION_ORIGIN = {
-  SELECTED: 'selected',
   RECEIVED: 'received',
+  SELECTED: 'selected',
 };
 
 export const navigationOptiosTransperant = {
-  title: '',
   headerStyle: {
-    shadowColor: 'transparent',
     elevation: 0,
+    shadowColor: 'transparent',
   },
+  title: '',
 };
 
 export { default as palette } from './palette';

@@ -1,18 +1,8 @@
+import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import { Text, View, Button } from 'react-native';
-import { styled } from 'nativewind';
-
-// Expo imports
-import * as SplashScreen from 'expo-splash-screen';
-
-// Redux imports
+import { Button, Text, View } from 'react-native';
 import { useGetAbilityQuery } from 'store/services/applicationApi';
-
-const StyledView = styled(View);
-const StyledText = styled(Text);
-const StyledButton = styled(Button);
 
 export default function HomeScreen({ route }) {
   const { t, i18n } = useTranslation();
@@ -34,9 +24,9 @@ export default function HomeScreen({ route }) {
   }, [route.params.appIsReady, isLoading]);
 
   return (
-    <StyledView className='flex-1 items-center justify-center bg-white dark:bg-slate-800'>
-      <StyledText className='text-slate-800 dark:text-white'>{t('home.hello')}</StyledText>
-      <StyledButton title='Change Language' onPress={changeLanguage} />
-    </StyledView>
+    <View className='flex-1 items-center justify-center'>
+      <Text className='text-[--theme-fg]'>{t('home.hello')}</Text>
+      <Button title='Change Language' onPress={changeLanguage} />
+    </View>
   );
 }

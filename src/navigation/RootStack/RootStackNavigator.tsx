@@ -1,13 +1,7 @@
-import { Platform } from 'react-native';
-
-// Expo imports
-import { StatusBar } from 'expo-status-bar';
-
-// React navigation imports
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-// Import screens
+import { StatusBar } from 'expo-status-bar';
+import { Platform } from 'react-native';
 import { HomeScreen } from 'screens';
 
 const RootStack = createNativeStackNavigator();

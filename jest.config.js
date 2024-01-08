@@ -1,21 +1,5 @@
-module.exports = {
-  preset: 'jest-expo',
-  transform: {
-    '^.+\\.tsx?$': [
-      'ts-jest',
-      {
-        tsconfig: {
-          jsx: 'react-jsx',
-        },
-      },
-    ],
-  },
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['./jest.setup.js'],
-  testMatch: ['**/?(*.)+(spec|test).ts?(x)'],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  moduleDirectories: ['node_modules', 'src'],
-  collectCoverage: true,
+export default {
+  collectCoverage: false,
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
     '!**/coverage/**',
@@ -39,6 +23,10 @@ module.exports = {
     '!**/mock-async-storage.js',
     '!**/app.config.js',
   ],
+  moduleDirectories: ['node_modules', 'src'],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  testEnvironment: 'jsdom',
+  testMatch: ['**/?(*.)+(spec|test).ts?(x)'],
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?@?react-native|unimodules-permissions-interface|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|@sentry/react-native|@sentry/core|@expo-google-fonts|native-base)',
   ],

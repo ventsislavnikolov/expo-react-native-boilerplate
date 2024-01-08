@@ -1,4 +1,5 @@
-module.exports = {
+export default {
+  branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -17,10 +18,9 @@ module.exports = {
     [
       'semantic-release-ado',
       {
-        varName: 'semanticVersion',
         setOnlyOnRelease: false,
+        varName: 'semanticVersion',
       },
     ],
   ],
-  branches: ['main'],
 };
