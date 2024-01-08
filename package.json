@@ -18,6 +18,7 @@
     "storybook": "storybook dev -p 6006",
     "test:storybook": "npx test-storybook",
     "start:client": "expo start --dev-client",
+    "commitlint": "npx --no -- commitlint --edit",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
     "lint:fix": "eslint ./src/**/*.tsx ./src/**/*.ts --fix",
     "prettier": "prettier --check ./src/**/*.tsx ./src/**/*.ts --fix",

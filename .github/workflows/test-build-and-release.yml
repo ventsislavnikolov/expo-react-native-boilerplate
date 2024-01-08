@@ -22,10 +22,10 @@ jobs:
         run: yarn install
 
       - name: Lint check
-        run: yarn eslint:check
+        run: yarn lint
 
       - name: Format check
-        run: yarn prettier:check
+        run: yarn prettier
 
       - name: Unit & Integration tests
         run: yarn test:ci
@@ -35,9 +35,6 @@ jobs:
 
       - name: Install wait-on
         run: npm install -g wait-on
-
-      - name: Install playwright
-        run: yarn playwright install
 
       - name: Smoke & Acceptance tests
         run: |
@@ -69,4 +66,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release@21 --omit=dev --ignore-scripts
+        run: npx semantic-release@22 --omit=dev --ignore-scripts
