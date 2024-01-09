@@ -7,7 +7,7 @@
         "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
         "EXPO_PUBLIC_API_URL": "https://api.example.com"
       },
-      "node": "20.8.0"
+      "node": "20.10.0"
     },
     "development-simulator": {
       "developmentClient": true,
@@ -19,7 +19,7 @@
       "ios": {
         "simulator": true
       },
-      "node": "20.8.0"
+      "node": "20.10.0"
     },
     "preview": {
       "distribution": "internal",
@@ -27,14 +27,14 @@
         "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
         "EXPO_PUBLIC_API_URL": "https://api.example.com"
       },
-      "node": "20.8.0"
+      "node": "20.10.0"
     },
     "production": {
       "env": {
         "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
         "EXPO_PUBLIC_API_URL": "https://api.example.com"
       },
-      "node": "18.18.0"
+      "node": "20.10.0"
     }
   },
   "cli": {
