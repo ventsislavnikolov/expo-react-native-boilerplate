@@ -9387,14 +9387,7 @@ expo-file-system@~16.0.0, expo-file-system@~16.0.2:
   resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-16.0.3.tgz#d7f45b77b6e085a106edb5178c3cbef884f42156"
   integrity sha512-F1RGwrkz70sIqdTswhsawFRSCwBgrQO0BEX8IxzWYRiucL2MnazeZ6tUx1vSQunuw49JexMcEozEccb0YEDzIw==
 
-expo-font@11.10.0:
-  version "11.10.0"
-  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-11.10.0.tgz#03bd0ad998f0295008572672f35e8018a84ea692"
-  integrity sha512-yqlsoOKWiYv8aBMFqheHSUKKEY/lrB7zHjzDc60OF1xGa1q8kh7mKQVwSaRMS0G77GEUvvk8Vb/uKw51KY1kGA==
-  dependencies:
-    fontfaceobserver "^2.1.0"
-
-expo-font@~11.10.0:
+expo-font@11.10.1, expo-font@~11.10.0:
   version "11.10.1"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-11.10.1.tgz#df9a853947d655c88f9286cfe6c11158958b066e"
   integrity sha512-eEi/EoJWFUy5CHJudfUtS8VKQdTW04f+OaKEBYj7eLUwW8bccRkA1ADtxyxLIkKdWlt2oZuVezvcgab5pYbCtQ==
@@ -16872,6 +16865,7 @@ string-length@^5.0.1:
     strip-ansi "^7.0.1"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -16955,6 +16949,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -18340,6 +18335,7 @@ wordwrap@^1.0.0:
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
