@@ -13,17 +13,16 @@ updates:
     reviewers:
       - ventsislavnikolov
 
-  - package-ecosystem: "npm"
+  - package-ecosystem: npm
     directory: /
     schedule:
-      interval: "monthly"
+      interval: monthly
     open-pull-requests-limit:  20
     versioning-strategy: increase
     reviewers:
       - ventsislavnikolov
     commit-message:
-      prefix: "chore"
-      include: "scope"
+      prefix: chore
+      include: scope
     ignore:
-     # ignore all GitHub linguist patch updates
-     # - dependency-name: "husky"
+      - dependency-name: husky
