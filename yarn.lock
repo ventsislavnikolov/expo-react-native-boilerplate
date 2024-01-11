@@ -1650,10 +1650,10 @@
     wrap-ansi "^7.0.0"
     ws "^8.12.1"
 
-"@expo/cli@0.16.6":
-  version "0.16.6"
-  resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.16.6.tgz#83a6606e2c9eb1cc1cbabe4ad623738935c4274a"
-  integrity sha512-nPfMR19LsljTo7hvgb5kcZJMUqxTEN70dMyNjQeeBn34PjX29QURN44kW4dY6Jl6Kxqg8yQdgJ8kE4j+VXKBXQ==
+"@expo/cli@0.16.7":
+  version "0.16.7"
+  resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.16.7.tgz#61c623d8869973bed96e9876a0ec52f3578dd76e"
+  integrity sha512-e2zeT2/hs2KyV/aXl/1z5kDSPgCbqPgb7S2+211a+6178eqUr6JNn6TTIFdLNe9Q7/aJaLPFgO5KJhOkg9QgJw==
   dependencies:
     "@babel/runtime" "^7.20.0"
     "@expo/code-signing-certificates" "0.0.5"
@@ -9382,7 +9382,7 @@ expo-file-system@~15.4.0, expo-file-system@~15.4.5:
   dependencies:
     uuid "^3.4.0"
 
-expo-file-system@~16.0.0, expo-file-system@~16.0.2:
+expo-file-system@~16.0.0, expo-file-system@~16.0.3:
   version "16.0.3"
   resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-16.0.3.tgz#d7f45b77b6e085a106edb5178c3cbef884f42156"
   integrity sha512-F1RGwrkz70sIqdTswhsawFRSCwBgrQO0BEX8IxzWYRiucL2MnazeZ6tUx1vSQunuw49JexMcEozEccb0YEDzIw==
@@ -9394,7 +9394,7 @@ expo-font@11.10.0:
   dependencies:
     fontfaceobserver "^2.1.0"
 
-expo-font@~11.10.0:
+expo-font@~11.10.1:
   version "11.10.1"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-11.10.1.tgz#df9a853947d655c88f9286cfe6c11158958b066e"
   integrity sha512-eEi/EoJWFUy5CHJudfUtS8VKQdTW04f+OaKEBYj7eLUwW8bccRkA1ADtxyxLIkKdWlt2oZuVezvcgab5pYbCtQ==
@@ -9413,7 +9413,7 @@ expo-keep-awake@~12.3.0:
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.3.0.tgz#c42449ae19c993274ddc43aafa618792b6aec408"
   integrity sha512-ujiJg1p9EdCOYS05jh5PtUrfiZnK0yyLy+UewzqrjUqIT8eAGMQbkfOn3C3fHE7AKd5AefSMzJnS3lYZcZYHDw==
 
-expo-keep-awake@~12.8.0:
+expo-keep-awake@~12.8.1:
   version "12.8.1"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.8.1.tgz#3c8df9d86c265741b5e7bdd36965aa0c6fc17df0"
   integrity sha512-P/VZFV02Rzgj13skMwH+ceGOGZSEdaUu5n7pCS3wThh2LppZjPJ7sBxUwyzeLa3DXEVUtwLZi+BiQ91wPwy9Gg==
@@ -9425,7 +9425,7 @@ expo-localization@14.8.1:
   dependencies:
     rtl-detect "^1.0.2"
 
-expo-modules-autolinking@1.5.1, expo-modules-autolinking@1.9.0:
+expo-modules-autolinking@1.10.0, expo-modules-autolinking@1.5.1, expo-modules-autolinking@1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-1.9.0.tgz#5bb11b5e2013b46888c2124d90cbd89f8ee6d91b"
   integrity sha512-FVRuclmR7w6FZRXZmTwPdIr9PNCP7FUWMhpzaxbKU/xm7DbNw5ORAv2gaM8t9OaMxYjIAMSNYi0NnmLIinzBKA==
@@ -9437,10 +9437,10 @@ expo-modules-autolinking@1.5.1, expo-modules-autolinking@1.9.0:
     find-up "^5.0.0"
     fs-extra "^9.1.0"
 
-expo-modules-core@1.11.4:
-  version "1.11.4"
-  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-1.11.4.tgz#9b5cadc389b4df917a68c931344030bc8297b8af"
-  integrity sha512-MeDvWvdI3cHJO2VsASXsNYVoou1sdEO/SGBdLh2lxRhNpCLB0IIEZ3uPZwQQ8WBfFyPk4QT7M3XhCdPCKaT21A==
+expo-modules-core@1.11.5:
+  version "1.11.5"
+  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-1.11.5.tgz#dcc483525cf1ca2be06db52964cb4ab1053720b2"
+  integrity sha512-fpfBJfiGsDl91118bBfb2LC3IdSi+8eZ3wWRskBid8HHsXPoUodi89zdGeEZQlEv1iAXDGmF3Bemp06dRSSn9A==
   dependencies:
     invariant "^2.2.4"
 
@@ -9495,24 +9495,24 @@ expo@*:
     pretty-format "^26.5.2"
     uuid "^3.4.0"
 
-expo@50.0.0-preview.8:
-  version "50.0.0-preview.8"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-50.0.0-preview.8.tgz#e418499950dba033446661f54a6e711f3605b25e"
-  integrity sha512-NdXchTthMJyxLf71uipNDAMLbmmbqPaStjNC9qZBR6FX9wx4gQk55r1DgLMg82+y0fm8ZtRnZiIGmOhNLHw9Xg==
+expo@50.0.0-preview.9:
+  version "50.0.0-preview.9"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-50.0.0-preview.9.tgz#bd57dbdab1680d61fb87e47ab4ad21f3580e9105"
+  integrity sha512-6RLY/PAaeczX2x2wgR1eIKn8liQEp4Mkr1X5Pm+fHBQhNdSEkn0bbY19+CxNczPqysGGfz9jHkfkP6szUgq3wQ==
   dependencies:
     "@babel/runtime" "^7.20.0"
-    "@expo/cli" "0.16.6"
+    "@expo/cli" "0.16.7"
     "@expo/config" "8.5.3"
     "@expo/config-plugins" "7.8.3"
     "@expo/metro-config" "0.17.1"
     "@expo/vector-icons" "^14.0.0"
     babel-preset-expo "~10.0.1"
     expo-asset "~9.0.2"
-    expo-file-system "~16.0.2"
-    expo-font "~11.10.0"
-    expo-keep-awake "~12.8.0"
-    expo-modules-autolinking "1.9.0"
-    expo-modules-core "1.11.4"
+    expo-file-system "~16.0.3"
+    expo-font "~11.10.1"
+    expo-keep-awake "~12.8.1"
+    expo-modules-autolinking "1.10.0"
+    expo-modules-core "1.11.5"
     fbemitter "^3.0.0"
     whatwg-url-without-unicode "8.0.0-3"
 
@@ -16872,6 +16872,7 @@ string-length@^5.0.1:
     strip-ansi "^7.0.1"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -16955,6 +16956,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -18340,6 +18342,7 @@ wordwrap@^1.0.0:
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==

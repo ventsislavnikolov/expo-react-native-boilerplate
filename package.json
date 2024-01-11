@@ -38,7 +38,7 @@
     "@reduxjs/toolkit": "2.0.1",
     "@sentry/react-native": "5.5.0",
     "@types/react": "18.2.47",
-    "expo": "50.0.0-preview.8",
+    "expo": "50.0.0-preview.9",
     "expo-application": "5.8.1",
     "expo-build-properties": "0.11.0",
     "expo-constants": "15.4.2",
