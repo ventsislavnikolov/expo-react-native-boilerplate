@@ -36,7 +36,7 @@
     "@react-navigation/native": "6.1.9",
     "@react-navigation/native-stack": "6.9.17",
     "@reduxjs/toolkit": "2.0.1",
-    "@sentry/react-native": "5.5.0",
+    "@sentry/react-native": "5.15.2",
     "@types/react": "18.2.47",
     "expo": "50.0.0-preview.8",
     "expo-application": "5.8.1",
