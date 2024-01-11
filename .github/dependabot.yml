@@ -25,4 +25,7 @@ updates:
       prefix: chore
       include: scope
     ignore:
-      - dependency-name: husky
+      - dependency-name: expo-* # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
+      - dependency-name: "@react-native-community/async-storage" # ignore this package because it is managed by expo versioning
+      - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
