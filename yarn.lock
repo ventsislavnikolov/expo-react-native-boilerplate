@@ -1980,7 +1980,7 @@
     base64-js "^1.2.3"
     xmlbuilder "^14.0.0"
 
-"@expo/prebuild-config@6.2.6", "@expo/prebuild-config@6.7.0", "@expo/prebuild-config@6.7.2", "@expo/prebuild-config@6.7.3":
+"@expo/prebuild-config@6.2.6", "@expo/prebuild-config@6.7.0", "@expo/prebuild-config@6.7.3":
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/@expo/prebuild-config/-/prebuild-config-6.7.0.tgz#1fdac4ee8e5a864cf0eb95fdffd3a0673c2febad"
   integrity sha512-55V9wbtH/d1htj68MM9pEfSHqq61PjO99dCCERdR37iFQS8q6dDblWC0PAMinI4BDOl14YzY7jtmDv9PbXG9tQ==
@@ -9457,12 +9457,12 @@ expo-network@5.8.0:
   resolved "https://registry.yarnpkg.com/expo-network/-/expo-network-5.8.0.tgz#1481471467fc5cc55df750eaf74927ea8c664fbc"
   integrity sha512-mTtyqRgLKvXWB+xCoY5WMtRrpVqYmcXWz3YbyN+X0HRGqXg7a+UYOXeKlxrkwBiadsElhmfMeaj1UpmW79Zw/w==
 
-expo-splash-screen@0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.26.1.tgz#702e0e0163af24defb5f0f076165fe613e1af79b"
-  integrity sha512-cPxQq1iJbhc1r7WN8QyIs4ISKQOPn5HamJUatcq82jPoZUBrzg1Ofa/55Ivnbi1z2GmQHg6vU/TQZ2cc6cjzbQ==
+expo-splash-screen@0.26.2:
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.26.2.tgz#3bf733618a76efe7dc25af32254767673b13dda2"
+  integrity sha512-yvKjO+3WA1HSA/fRCtiRweC/LPYaB5UKjJQs7kHyZHjObvjAZC95tNorUitGQYPkrjgywsaDsXKlJt5KspmVgg==
   dependencies:
-    "@expo/prebuild-config" "6.7.2"
+    "@expo/prebuild-config" "6.7.3"
 
 expo-status-bar@1.11.1:
   version "1.11.1"
@@ -16872,6 +16872,7 @@ string-length@^5.0.1:
     strip-ansi "^7.0.1"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -16955,6 +16956,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -18340,6 +18342,7 @@ wordwrap@^1.0.0:
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
