@@ -29,3 +29,4 @@ updates:
       - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
       - dependency-name: "@react-native-community/async-storage" # ignore this package because it is managed by expo versioning
       - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
+      - dependency-name: sentry-expo # ignore this package because it is managed by expo versioning
