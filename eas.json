@@ -1,44 +1,50 @@
 {
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
-      "env": {
-        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
+    "base": {
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r21e"
       },
-      "node": "20.11.0"
-    },
-    "development-simulator": {
-      "developmentClient": true,
-      "distribution": "internal",
       "env": {
         "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
         "EXPO_PUBLIC_API_URL": "https://api.example.com"
       },
       "ios": {
-        "simulator": true
+        "bundler": "2.2.4",
+        "image": "macos-ventura-13.6-xcode-15.1"
       },
-      "node": "20.11.0"
+      "node": "20.10.0",
+      "yarn": "1.22.21"
+    },
+    "development": {
+      "channel": "staging",
+      "developmentClient": true,
+      "distribution": "internal",
+      "extends": "base"
+    },
+    "development-simulator": {
+      "channel": "staging",
+      "developmentClient": true,
+      "distribution": "internal",
+      "extends": "base",
+      "ios": {
+        "simulator": true
+      }
     },
     "preview": {
+      "channel": "staging",
       "distribution": "internal",
-      "env": {
-        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
-      },
-      "node": "20.11.0"
+      "extends": "base"
     },
     "production": {
-      "env": {
-        "EAS_PROJECT_ID": "65bfd5f8-08a5-4fc1-8938-097639c34225",
-        "EXPO_PUBLIC_API_URL": "https://api.example.com"
-      },
-      "node": "20.11.0"
+      "autoIncrement": true,
+      "channel": "production",
+      "distribution": "store",
+      "extends": "base"
     }
   },
   "cli": {
-    "version": ">= 5.4.0"
+    "appVersionSource": "remote",
+    "version": ">=0.54.1"
   },
   "submit": {
     "production": {}
