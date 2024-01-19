@@ -1,4 +1,4 @@
 export default {
-  'src/**/*.{css,scss,md}': ['yarn fix:format'],
-  'src/**/*.{js,jsx,ts,tsx}': ['yarn lint', 'yarn fix:format'],
+	"./src/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": ["pnpm lint", "pnpm prettier:write"],
+	"./__tests__/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": ["pnpm lint", "pnpm prettier:write"],
 };
