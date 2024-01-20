@@ -26,7 +26,7 @@
     "build:ios:development": "eas build --profile development --platform ios",
     "build:android:development": "eas build --profile development --platform android",
     "build:ios:development:simulator": "eas build --profile development-simulator --platform ios",
-    "lint": "npx oxlint --import-plugin --jest-plugin -D all -c ./eslintrc.json --deny-warnings"
+    "lint": "npx oxlint --jest-plugin -D all -c ./eslintrc.json --deny-warnings"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "0.2.3",
