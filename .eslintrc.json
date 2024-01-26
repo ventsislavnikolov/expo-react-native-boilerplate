@@ -1,0 +1,78 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "es2021": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["lodash", "unicorn", "unused-imports", "@typescript-eslint", "react"],
+  "extends": [
+    "plugin:lodash/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:tailwindcss/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "import/no-unresolved": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }]
+  },
+  "overrides": [
+    {
+      "files": ["tests/**"],
+      "plugins": ["vitest", "jest", "jest-dom", "testing-library"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react",
+        "plugin:vitest/recommended"
+      ],
+      "rules": {
+        "jest/expect-expect": "off",
+        "vitest/expect-expect": "off"
+      }
+    }
+  ],
+  "settings": {
+    "polyfills": ["fetch"],
+    "jest": {
+      "version": 29
+    },
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["store", "./src/store"],
+          ["hooks", "./src/hooks"],
+          ["router", "./src/router"],
+          ["routes", "./src/routes"],
+          ["assets", "./src/assets"],
+          ["helpers", "./src/helpers"],
+          ["components", "./src/components"],
+          ["translations", "./src/translations"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  }
+}
