@@ -1,7 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  plugins: [],
-  presets: [],
+  presets: [require('nativewind/preset')],
   theme: {
     extend: {
       colors: {
@@ -11,4 +10,5 @@ module.exports = {
       },
     },
   },
+  plugins: [],
 };

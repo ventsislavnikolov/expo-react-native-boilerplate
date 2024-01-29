@@ -7,9 +7,12 @@ import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 import { Asset } from 'expo-asset';
 import { Provider } from 'react-redux';
 import { store } from 'store';
-import 'translations';
 
 import { RootStackNavigator } from 'navigation';
+
+import 'translations';
+
+import './global.css';
 
 Sentry.init({
   debug: true,

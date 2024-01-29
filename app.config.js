@@ -6,6 +6,7 @@ module.exports = ({ config }) => ({
   orientation: 'portrait',
   icon: './assets/icon.png',
   assetBundlePatterns: ['**/*'],
+  userInterfaceStyle: 'automatic',
   splash: {
     backgroundColor: '#ffffff',
     image: './assets/splash.png',
@@ -23,6 +24,9 @@ module.exports = ({ config }) => ({
     },
     package: 'com.ventsislavnikolov.expo.boilerplate',
     permissions: ['android.permission.READ_CONTACTS', 'android.permission.WRITE_CONTACTS'],
+  },
+  web: {
+    favicon: './assets/favicon.png',
   },
   extra: {
     eas: {
