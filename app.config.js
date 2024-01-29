@@ -1,55 +1,44 @@
-export default ({ config }) => ({
+module.exports = ({ config }) => ({
+  name: config.name,
+  slug: config.slug,
+  scheme: config.scheme,
+  version: config.version,
+  orientation: 'portrait',
+  icon: './assets/icon.png',
+  assetBundlePatterns: ['**/*'],
+  splash: {
+    backgroundColor: '#ffffff',
+    image: './assets/splash.png',
+    resizeMode: 'contain',
+  },
+  ios: {
+    bundleIdentifier: 'com.ventsislavnikolov.expo.boilerplate',
+
+    supportsTablet: true,
+  },
   android: {
     adaptiveIcon: {
       backgroundColor: '#ffffff',
       foregroundImage: './assets/adaptive-icon.png',
     },
-    package: 'ventsislavnikolov.expo',
+    package: 'com.ventsislavnikolov.expo.boilerplate',
     permissions: ['android.permission.READ_CONTACTS', 'android.permission.WRITE_CONTACTS'],
-    userInterfaceStyle: 'automatic',
-    versionCode: 1,
   },
-  assetBundlePatterns: ['**/*'],
   extra: {
     eas: {
       projectId: process.env.EAS_PROJECT_ID,
-      publicApi: process.env.EXPO_PUBLIC_API_URL,
     },
     sentryDns: process.env.SENTRY_DNS,
+    publicApi: process.env.EXPO_PUBLIC_API_URL,
   },
-  hooks: {
-    postPublish: [
-      {
-        config: {
-          organization: 'ventsislavnikolov',
-          project: 'expo-react-native-boilerplate',
-        },
-        file: 'sentry-expo/upload-sourcemaps',
-      },
-    ],
-  },
-  icon: './assets/icon.png',
-  ios: {
-    buildNumber: '1',
-    bundleIdentifier: 'ventsislavnikolov.expo',
-    infoPlist: {
-      NSContactsUsageDescription:
-        'Allowing access to your contacts will enable you to send SOS signal to emergency contacts.',
-    },
-    supportsTablet: true,
-    userInterfaceStyle: 'automatic',
-  },
-  name: config.name,
-  orientation: 'portrait',
   plugins: [
     [
       'expo-build-properties',
       {
         android: {
-          buildToolsVersion: '33.0.0',
-          compileSdkVersion: 33,
-          kotlinVersion: '1.7.10',
-          targetSdkVersion: 33,
+          targetSdkVersion: 34,
+          compileSdkVersion: 34,
+          buildToolsVersion: '34.0.0',
         },
         ios: {
           deploymentTarget: '13.4',
@@ -60,29 +49,33 @@ export default ({ config }) => ({
     [
       'expo-contacts',
       {
-        contactsPermission:
-          'Allowing access to your contacts will enable you to send SOS signal to emergency contacts.',
+        contactsPermission: 'Allow $(PRODUCT_NAME) to access your contacts.',
       },
     ],
     [
       'expo-font',
       {
-        fonts: 'node_modules/@expo-google-fonts/roboto/Roboto_400Regular.ttf',
+        fonts: ['node_modules/@expo-google-fonts/inter/Inter_900Black.ttf'],
       },
     ],
-    'sentry-expo',
+    [
+      '@sentry/react-native/expo',
+      {
+        organization: 'ventsislavnikolov',
+        project: 'expo-react-native-boilerplate',
+      },
+    ],
     'expo-localization',
   ],
-  scheme: config.scheme,
-  slug: config.slug,
-  splash: {
-    backgroundColor: '#ffffff',
-    image: './assets/splash.png',
-    resizeMode: 'contain',
-  },
-  userInterfaceStyle: 'automatic',
-  version: '0.0.0',
-  web: {
-    favicon: './assets/favicon.png',
+  hooks: {
+    postPublish: [
+      {
+        config: {
+          organization: 'ventsislavnikolov',
+          project: 'expo-react-native-boilerplate',
+        },
+        file: 'sentry-expo/upload-sourcemaps',
+      },
+    ],
   },
 });

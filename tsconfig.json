@@ -1,49 +1,10 @@
 {
-  "display": "expo",
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "incremental": true,
-    "composite": false,
-    "target": "ES2021",
-    "jsx": "react-native",
-    "lib": ["ES2021", "DOM", "DOM.Iterable"],
-    "useDefineForClassFields": true,
+    "strict": true,
     "baseUrl": "./",
-    "module": "ESNext",
-    "moduleResolution": "node",
     "paths": {
       "*": ["./src/*"]
     },
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "declaration": true,
-    "declarationMap": true,
-    "downlevelIteration": true,
-    "inlineSources": false,
-    "noEmit": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "preserveWatchOutput": true
-  },
-  "types": ["node", "jest", "@testing-library/jest-dom"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.mjs",
-    "src",
-    "tests/unit/App.test.ts",
-    "env.mjs"
-  ],
-  "exclude": ["node_modules"]
+  }
 }

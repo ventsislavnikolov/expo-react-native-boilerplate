@@ -29,10 +29,16 @@
     }
   },
   "rules": {
+    "no-undef": "off",
     "linebreak-style": "off",
+    "unicorn/no-null": "off",
+    "unicorn/prefer-spread": "off",
     "import/no-unresolved": "off",
+    "unicorn/filename-case": "off",
+    "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "error",
     "jsx-quotes": ["error", "prefer-single"],
+    "@typescript-eslint/no-explicit-any": "off",
     "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }]
   },
   "overrides": [

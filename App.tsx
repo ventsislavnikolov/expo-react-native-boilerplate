@@ -1,68 +1,53 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import NetInfo from '@react-native-community/netinfo';
-import { LogBox } from 'react-native';
-import * as Font from 'expo-font';
-import * as Sentry from 'sentry-expo';
-import Constants from 'expo-constants';
-import * as Network from 'expo-network';
 import * as SplashScreen from 'expo-splash-screen';
+import * as Sentry from '@sentry/react-native';
+import Constants from 'expo-constants';
+import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 import { Asset } from 'expo-asset';
-import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import { Provider } from 'react-redux';
 import { store } from 'store';
 import 'translations';
-import './global.css';
+
 import { RootStackNavigator } from 'navigation';
 
-LogBox.ignoreLogs(['[Reanimated]']);
-
-if (!__DEV__) {
-  const devServerPort = 8081;
-  let devServerIpAddress = '';
-  Network.getIpAddressAsync().then((ip) => {
-    devServerIpAddress = ip;
-  });
-
-  Sentry.init({
-    dsn: Constants.expoConfig?.extra?.sentryDns,
-    tracesSampleRate: 1.0,
-    integrations: [
-      new Sentry.Native.ReactNativeTracing({
-        shouldCreateSpanForRequest: (url) =>
-          !__DEV__ || !url.startsWith(`http://${devServerIpAddress}:${devServerPort}/logs`),
-      }),
-    ],
-  });
-}
+Sentry.init({
+  debug: true,
+  dsn: Constants?.expoConfig?.extra?.sentryDsn,
+});
 
 SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+function App() {
   const [state, setState] = useState({
     appIsReady: false,
     isConnected: null,
   });
 
   const [fontsLoaded, fontError] = useFonts({
-    Roboto_400Regular,
+    Inter_900Black,
   });
 
-  const handleLoadingError = (error) => {
-    Sentry.Native.captureException(error);
+  const handleLoadingError = (error: any) => {
+    Sentry.captureMessage(error);
   };
+
+  const onPrepareDone = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
   useEffect(() => {
     async function prepare() {
       try {
         // Pre-load images, make any API calls you need to do here
         await Asset.loadAsync([]);
-        // Pre-load fonts, make any API calls you need to do here
-        await Font.loadAsync({});
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
         await new Promise((resolve) => setTimeout(resolve, 1000));
-      } catch (e) {
-        handleLoadingError(e);
+      } catch (error) {
+        handleLoadingError(error);
       } finally {
         // Tell the application to render
         if (fontsLoaded && !fontError) {
@@ -71,13 +56,14 @@ export default function App() {
               appIsReady: true,
               isConnected: netInfostate.isConnected,
             });
+            onPrepareDone();
           });
         }
       }
     }
 
     prepare();
-  }, [fontsLoaded]);
+  }, [fontError, fontsLoaded, onPrepareDone]);
 
   if (!state.appIsReady) {
     return null;
@@ -89,3 +75,5 @@ export default function App() {
     </Provider>
   );
 }
+
+export default Sentry.wrap(App);
