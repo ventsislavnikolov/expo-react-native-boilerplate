@@ -26,7 +26,7 @@ updates:
       include: scope
     ignore:
       - dependency-name: "expo-*" # ignore all expo packages because they are managed by expo versioning
-      - dependency-name: "react-native-*" # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "react-native" # ignore all expo packages because they are managed by expo versioning
       - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
       - dependency-name: "@react-native-async-storage/async-storage" # ignore this package because it is managed by expo versioning
       - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
