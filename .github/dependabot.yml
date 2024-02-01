@@ -17,7 +17,7 @@ updates:
     directory: /
     schedule:
       interval: monthly
-    open-pull-requests-limit:  20
+    open-pull-requests-limit: 50
     versioning-strategy: increase
     reviewers:
       - ventsislavnikolov
@@ -25,8 +25,8 @@ updates:
       prefix: chore
       include: scope
     ignore:
-      - dependency-name: expo-* # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "expo-*" # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "react-native-*" # ignore all expo packages because they are managed by expo versioning
       - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
-      - dependency-name: "@react-native-community/async-storage" # ignore this package because it is managed by expo versioning
+      - dependency-name: "@react-native-async-storage/async-storage" # ignore this package because it is managed by expo versioning
       - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
-      - dependency-name: sentry-expo # ignore this package because it is managed by expo versioning
