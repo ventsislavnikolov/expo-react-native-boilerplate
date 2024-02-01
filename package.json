@@ -120,7 +120,7 @@
     "react-test-renderer": "18.2.0",
     "semantic-release": "23.0.0",
     "semantic-release-ado": "1.4.0",
-    "storybook": "7.6.10",
+    "storybook": "7.6.12",
     "storybook-dark-mode": "3.0.3",
     "ts-jest": "29.1.1",
     "typescript": "5.3.3"
