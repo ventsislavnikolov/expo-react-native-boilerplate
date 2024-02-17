@@ -5,11 +5,11 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "test": "jest",
+    "prepare": "husky",
     "start": "expo start",
     "test:ci": "jest --ci",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "prepare": "husky install",
     "test:watch": "jest --watch",
     "lint:staged": "pnpx lint-staged",
     "android": "expo start --android",
