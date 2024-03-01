@@ -30,3 +30,5 @@ updates:
       - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
       - dependency-name: "@react-native-async-storage/async-storage" # ignore this package because it is managed by expo versioning
       - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
+      - dependency-name: "react-native-reanimated" # ignore this package because it is managed by expo versioning
+      - dependency-name: "react-native-safe-area-context" # ignore this package because it is managed by expo versioning
