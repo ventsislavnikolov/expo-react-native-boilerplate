@@ -3756,10 +3756,10 @@
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-coverage@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-coverage/-/addon-coverage-1.0.0.tgz#b3c587f240a53500a72a5f8c9a30495fac410877"
-  integrity sha512-7RMllRtDwyWH2fOeCS7ZG8o5eDTd44C0ZwA+m7dJDrnOXled75RddBPMYF+BsJjeAAWOkWxsII05EKCgS7QG2A==
+"@storybook/addon-coverage@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-coverage/-/addon-coverage-1.0.1.tgz#3ac1ac3a6708612d41f849e04a39ceb3b3396532"
+  integrity sha512-jGDYPBbh3+LXMDw0Nmw+fUEDH3kuHvHSOjE1fqi4ac00CnwHnyD5PD6RFSpVxR4Fw/tCDPmKEubbOzQCSZGyJg==
   dependencies:
     "@istanbuljs/load-nyc-config" "^1.1.0"
     "@jsdevtools/coverage-istanbul-loader" "^3.0.5"
