@@ -22,7 +22,7 @@ jobs:
         run: yarn lint
 
       - name: Format check
-        run: yarn prettier:check
+        run: yarn prettier
 
       - name: Unit & Integration tests
         run: yarn test:ci
