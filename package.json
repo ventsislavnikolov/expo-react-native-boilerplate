@@ -124,7 +124,7 @@
     "semantic-release": "23.0.2",
     "semantic-release-ado": "1.4.0",
     "storybook": "7.6.17",
-    "storybook-dark-mode": "3.0.3",
+    "storybook-dark-mode": "4.0.1",
     "ts-jest": "29.1.2",
     "typescript": "5.3.3"
   }
