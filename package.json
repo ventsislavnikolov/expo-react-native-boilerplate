@@ -80,7 +80,7 @@
     "@storybook/addon-a11y": "7.6.17",
     "@storybook/addon-coverage": "1.0.1",
     "@storybook/addon-designs": "7.0.9",
-    "@storybook/addon-essentials": "7.6.17",
+    "@storybook/addon-essentials": "8.0.5",
     "@storybook/addon-interactions": "7.6.17",
     "@storybook/addon-links": "7.6.17",
     "@storybook/addon-react-native-web": "0.0.23",
