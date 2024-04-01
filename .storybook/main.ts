@@ -9,7 +9,17 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-storysource',
     '@storybook/addon-styling',
+    '@storybook/addon-themes',
     'storybook-dark-mode',
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-reanimated', 'nativewind', 'react-native-css-interop'],
+        babelPresets: ['nativewind/babel'],
+        babelPresetReactOptions: { jsxImportSource: 'nativewind' },
+        babelPlugins: ['react-native-reanimated/plugin'],
+      },
+    },
   ],
   framework: {
     name: '@storybook/react-webpack5',
