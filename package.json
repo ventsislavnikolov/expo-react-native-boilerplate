@@ -121,7 +121,7 @@
     "prettier": "3.2.5",
     "react-dom": "18.2.0",
     "react-test-renderer": "18.2.0",
-    "semantic-release": "23.0.2",
+    "semantic-release": "23.0.6",
     "semantic-release-ado": "1.4.0",
     "storybook": "7.6.17",
     "storybook-dark-mode": "3.0.3",
