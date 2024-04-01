@@ -8,7 +8,6 @@ const config = {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-storysource',
-    '@storybook/addon-styling',
     '@storybook/addon-themes',
     'storybook-dark-mode',
     {

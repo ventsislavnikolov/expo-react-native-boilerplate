@@ -1,4 +1,4 @@
-import { withThemeByClassName } from '@storybook/addon-styling';
+import { withThemeByClassName } from '@storybook/addon-themes';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
