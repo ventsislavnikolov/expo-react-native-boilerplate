@@ -4,7 +4,7 @@ import * as Localization from 'expo-localization';
 const languageDetector: any = {
   async: true,
   cacheUserLanguage: () => {},
-  detect: async (callback) => {
+  detect: async (callback: any) => {
     await AsyncStorage.getItem('language', (err, lng) => {
       if (err || !lng) {
         const bestLng = Localization.locale.replace('_', '-');

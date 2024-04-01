@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-exports */
-/* eslint-disable import/extensions */
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import languageDetector from './languageDetector';

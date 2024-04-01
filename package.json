@@ -28,7 +28,7 @@
     "build:chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "build:android:development": "eas build --profile development --platform android",
     "build:ios:development:simulator": "eas build --profile development-simulator --platform ios",
-    "lint": "npx oxlint --jest-plugin --jsx-a11y-plugin -D all -c ./.eslintrc.json --deny-warnings"
+    "lint": "npx oxlint --jest-plugin --jsx-a11y-plugin -D all -A nursery -c ./.eslintrc.json --deny-warnings"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "0.2.3",

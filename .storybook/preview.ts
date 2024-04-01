@@ -19,5 +19,5 @@ export const decorators = [
       dark: 'dark',
     },
     defaultTheme: 'light',
-  }) as any,
+  }),
 ];

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'react-native';
 import { useGetAbilityQuery } from 'store/services/applicationApi';
 
-export default function HomeScreen({ route }) {
+export default function HomeScreen({ route }: any) {
   const { t, i18n } = useTranslation();
 
   const { isLoading } = useGetAbilityQuery({ limit: 20, offset: 0 });

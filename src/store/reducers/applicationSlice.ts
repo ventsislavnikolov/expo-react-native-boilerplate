@@ -16,4 +16,4 @@ export const { setAbilities } = applicationSlice.actions;
 
 export default applicationSlice.reducer;
 
-export const getAbilities = (state) => state?.application?.abilities;
+export const getAbilities = (state: any) => state?.application?.abilities;
