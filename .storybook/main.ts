@@ -1,3 +1,5 @@
+import path from 'path';
+
 const config = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -31,5 +33,11 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
+  webpackFinal: async (config) => {
+    config.resolve.modules.push(path.resolve(__dirname, '../src'));
+
+    return config;
+  },
 };
+
 export default config;
