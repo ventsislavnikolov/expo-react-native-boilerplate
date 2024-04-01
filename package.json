@@ -38,7 +38,7 @@
     "@react-navigation/bottom-tabs": "6.5.16",
     "@react-navigation/native": "6.1.14",
     "@react-navigation/native-stack": "6.9.22",
-    "@reduxjs/toolkit": "2.2.1",
+    "@reduxjs/toolkit": "2.2.3",
     "@sentry/react-native": "5.19.1",
     "expo": "50.0.8",
     "expo-application": "5.8.3",
