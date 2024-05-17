@@ -38,6 +38,8 @@
     "linebreak-style": "off",
     "unicorn/no-null": "off",
     "react/prop-types": "off",
+    "no-empty-function": "off",
+    "jest/require-hook": "off",
     "import/extensions": "off",
     "lodash/prefer-noop": "off",
     "import/no-unresolved": "off",
@@ -62,6 +64,7 @@
     "import/no-named-as-default-member": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-anonymous-default-export": "off",
     "tree-shaking/no-side-effects-in-initialization": "off",
     "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
