@@ -3635,10 +3635,10 @@
     test-exclude "^6.0.0"
     vite-plugin-istanbul "^3.0.1"
 
-"@storybook/addon-designs@8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-designs/-/addon-designs-8.0.1.tgz#c8da0732d9f6d8b382dee6243c2c1516cf2601c0"
-  integrity sha512-WiDkSD8ZYCs1CzIZUClcZ8ZF/9+YHAvYbiq0W69jQkyRPGfKSe/ZLXvte+bFKk+JJ0X68sk3nsaTlUQJHjltzw==
+"@storybook/addon-designs@8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-designs/-/addon-designs-8.0.2.tgz#311cb9a82068cf1475ebc2079c84348558dae54a"
+  integrity sha512-/ZDVB1dCmb56IZymb0z5uuodjpAx19NxwI2URHFMFZiwv65lwom5AJx2QHdzqyQfXHryGq/eQrUSswNPYVYqwA==
   dependencies:
     "@figspec/react" "^1.0.0"
 
