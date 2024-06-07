@@ -33,3 +33,6 @@ updates:
       - dependency-name: "react-native-reanimated" # ignore this package because it is managed by expo versioning
       - dependency-name: "react-native-safe-area-context" # ignore this package because it is managed by expo versioning
       - dependency-name: "react-native-screens" # ignore this package because it is managed by expo versioning
+      - dependency-name: "react-dom" # ignore this package because it is managed by expo versioning
+      - dependency-name: "@types/react" # ignore this package because it is managed by expo versioning
+      - dependency-name: "typescript" # ignore this package because it is managed by expo versioning
