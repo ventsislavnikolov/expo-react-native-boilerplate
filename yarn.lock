@@ -3763,12 +3763,12 @@
   resolved "https://registry.yarnpkg.com/@storybook/addon-react-native-web/-/addon-react-native-web-0.0.24.tgz#1fe8c8352dcb0615d056ce21567fda56a43ab26b"
   integrity sha512-jqTqPf4KFv9C+plIlfD1+hcTBv1ELSr01G7W36D3sZTl+EJEoa6MM1q0pNHl6+FoYWjJq3PgL/mw+zMbEsVxGQ==
 
-"@storybook/addon-storysource@8.1.6":
-  version "8.1.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-8.1.6.tgz#a44f45a95195522176505b4d5ae2458c24914b7b"
-  integrity sha512-Ia/KH1bjdABtZjG/ql5nlB2IHpIuMJae1Etp6Mq90Le9Dy4+F8exjCKRf+M3LrsDokTlobgcEBslHjCKj6Wjuw==
+"@storybook/addon-storysource@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-8.1.11.tgz#127bde66ecee62d2ee10776970b37f8aa81a8a42"
+  integrity sha512-b2K3+ZzfANDTTeN1jnqNgAQ5ZIhnhIAv89gC/36cOhSK5NLyKmyVKLGQmR3fVqX3URpnz9xccst2JNXopvtccw==
   dependencies:
-    "@storybook/source-loader" "8.1.6"
+    "@storybook/source-loader" "8.1.11"
     estraverse "^5.2.0"
     tiny-invariant "^1.3.1"
 
@@ -3881,6 +3881,17 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.5.0"
 
+"@storybook/channels@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-8.1.11.tgz#7d4b1877ae31d4c073c17a36b157067e2a71f231"
+  integrity sha512-fu5FTqo6duOqtJFa6gFzKbiSLJoia+8Tibn3xFfB6BeifWrH81hc+AZq0lTmHo5qax2G5t8ZN8JooHjMw6k2RA==
+  dependencies:
+    "@storybook/client-logger" "8.1.11"
+    "@storybook/core-events" "8.1.11"
+    "@storybook/global" "^5.0.0"
+    telejson "^7.2.0"
+    tiny-invariant "^1.3.1"
+
 "@storybook/channels@8.1.6":
   version "8.1.6"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-8.1.6.tgz#2fb2b51fe0ae5966e75d25cf995392048f8b62a4"
@@ -3933,6 +3944,13 @@
     tempy "^3.1.0"
     tiny-invariant "^1.3.1"
     ts-dedent "^2.0.0"
+
+"@storybook/client-logger@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-8.1.11.tgz#4fbf660869466d5faff89827ac9dee2fc1a084b0"
+  integrity sha512-DVMh2usz3yYmlqCLCiCKy5fT8/UR9aTh+gSqwyNFkGZrIM4otC5A8eMXajXifzotQLT5SaOEnM3WzHwmpvMIEA==
+  dependencies:
+    "@storybook/global" "^5.0.0"
 
 "@storybook/client-logger@8.1.6":
   version "8.1.6"
@@ -4012,6 +4030,14 @@
     tiny-invariant "^1.3.1"
     ts-dedent "^2.0.0"
     util "^0.12.4"
+
+"@storybook/core-events@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-8.1.11.tgz#e72f9563aef3286c106021d9926723bc24614f4a"
+  integrity sha512-vXaNe2KEW9BGlLrg0lzmf5cJ0xt+suPjWmEODH5JqBbrdZ67X6ApA2nb6WcxDQhykesWCuFN5gp1l+JuDOBi7A==
+  dependencies:
+    "@storybook/csf" "^0.1.7"
+    ts-dedent "^2.0.0"
 
 "@storybook/core-events@8.1.6", "@storybook/core-events@^8.0.0":
   version "8.1.6"
@@ -4297,13 +4323,13 @@
     memoizerific "^1.11.3"
     qs "^6.10.0"
 
-"@storybook/source-loader@8.1.6":
-  version "8.1.6"
-  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-8.1.6.tgz#fcdff87892450b7cc0af4a6209d7be0740dc130f"
-  integrity sha512-lKJ3vUsETsKMR9lpCyrB51Js/1W94fZjIDXNnslgLpoxhCIT4MB1eDRNa6DGynTIzhajG3ZIGymqOj/gRr3xdg==
+"@storybook/source-loader@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-8.1.11.tgz#802215229efeed4887730a6b9ffcc6f76ce0a345"
+  integrity sha512-4cfJ7aPjtniIdDGiFjdFpO47byHOl4RKYCJEHf9t+j0xHmlXe4B9aAinxuFfv3GKAXfLvSbbwGO0cDZQRj+brw==
   dependencies:
     "@storybook/csf" "^0.1.7"
-    "@storybook/types" "8.1.6"
+    "@storybook/types" "8.1.11"
     estraverse "^5.2.0"
     lodash "^4.17.21"
     prettier "^3.1.1"
@@ -4375,6 +4401,15 @@
     "@storybook/client-logger" "8.1.6"
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
+
+"@storybook/types@8.1.11":
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/types/-/types-8.1.11.tgz#c6e89fb6d543ebd4d3445a465af6aa27fbbe6aaa"
+  integrity sha512-k9N5iRuY2+t7lVRL6xeu6diNsxO3YI3lS4Juv3RZ2K4QsE/b3yG5ElfJB8DjHDSHwRH4ORyrU71KkOCUVfvtnw==
+  dependencies:
+    "@storybook/channels" "8.1.11"
+    "@types/express" "^4.7.0"
+    file-system-cache "2.3.0"
 
 "@storybook/types@8.1.6":
   version "8.1.6"
