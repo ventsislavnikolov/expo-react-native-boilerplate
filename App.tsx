@@ -1,19 +1,17 @@
-/* eslint-disable camelcase */
-import React, { useEffect, useState, useCallback } from 'react';
-import NetInfo from '@react-native-community/netinfo';
-import * as SplashScreen from 'expo-splash-screen';
-import * as Sentry from '@sentry/react-native';
-import Constants from 'expo-constants';
-import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
-import { Asset } from 'expo-asset';
-import { Provider } from 'react-redux';
-import { store } from 'store';
-
-import { RootStackNavigator } from 'navigation';
-
 import 'translations';
 
 import './global.css';
+
+import * as Sentry from '@sentry/react-native';
+import * as SplashScreen from 'expo-splash-screen';
+import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Asset } from 'expo-asset';
+import Constants from 'expo-constants';
+import NetInfo from '@react-native-community/netinfo';
+import { Provider } from 'react-redux';
+import { RootStackNavigator } from 'navigation';
+import { store } from 'store';
 
 Sentry.init({
   debug: true,

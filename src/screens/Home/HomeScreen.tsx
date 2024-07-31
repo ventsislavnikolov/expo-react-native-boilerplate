@@ -1,8 +1,8 @@
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'react-native';
+import { useEffect } from 'react';
 import { useGetAbilityQuery } from 'store/services/applicationApi';
+import { useTranslation } from 'react-i18next';
 
 export default function HomeScreen({ route }: any) {
   const { t, i18n } = useTranslation();
