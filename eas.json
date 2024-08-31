@@ -12,7 +12,7 @@
         "bundler": "2.2.4",
         "image": "macos-ventura-13.6-xcode-15.1"
       },
-      "node": "22.6.0",
+      "node": "22.7.0",
       "yarn": "1.22.21"
     },
     "development": {

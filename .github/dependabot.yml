@@ -17,7 +17,7 @@ updates:
     directory: /
     schedule:
       interval: monthly
-    open-pull-requests-limit: 50
+    open-pull-requests-limit: 99
     versioning-strategy: increase
     reviewers:
       - ventsislavnikolov
@@ -25,14 +25,16 @@ updates:
       prefix: chore
       include: scope
     ignore:
-      - dependency-name: "expo-*" # ignore all expo packages because they are managed by expo versioning
-      - dependency-name: "react-native" # ignore all expo packages because they are managed by expo versioning
-      - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
       - dependency-name: "@react-native-async-storage/async-storage" # ignore this package because it is managed by expo versioning
+      - dependency-name: "@react-native-community/netinfo" # ignore this package because it is managed by expo versioning
       - dependency-name: "@sentry/react-native" # ignore this package because it is managed by expo versioning
+      - dependency-name: "expo-*" # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "react" # ignore all expo packages because they are managed by expo versioning
+      - dependency-name: "react-native" # ignore all expo packages because they are managed by expo versioning
       - dependency-name: "react-native-reanimated" # ignore this package because it is managed by expo versioning
       - dependency-name: "react-native-safe-area-context" # ignore this package because it is managed by expo versioning
       - dependency-name: "react-native-screens" # ignore this package because it is managed by expo versioning
-      - dependency-name: "react-dom" # ignore this package because it is managed by expo versioning
       - dependency-name: "@types/react" # ignore this package because it is managed by expo versioning
+      - dependency-name: "eslint" # ignore this package because it is managed by expo versioning
+      - dependency-name: "react-dom" # ignore this package because it is managed by expo versioning
       - dependency-name: "typescript" # ignore this package because it is managed by expo versioning
