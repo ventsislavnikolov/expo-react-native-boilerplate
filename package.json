@@ -40,7 +40,7 @@
     "@react-navigation/native-stack": "6.11.0",
     "@reduxjs/toolkit": "2.2.7",
     "@sentry/react-native": "5.22.0",
-    "expo": "51.0.31",
+    "expo": "51.0.34",
     "expo-application": "5.9.1",
     "expo-asset": "10.0.10",
     "expo-build-properties": "0.12.5",
