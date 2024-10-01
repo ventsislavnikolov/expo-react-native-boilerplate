@@ -3553,10 +3553,10 @@
     "@storybook/global" "^5.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-react-native-web@0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-react-native-web/-/addon-react-native-web-0.0.24.tgz#1fe8c8352dcb0615d056ce21567fda56a43ab26b"
-  integrity sha512-jqTqPf4KFv9C+plIlfD1+hcTBv1ELSr01G7W36D3sZTl+EJEoa6MM1q0pNHl6+FoYWjJq3PgL/mw+zMbEsVxGQ==
+"@storybook/addon-react-native-web@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-react-native-web/-/addon-react-native-web-0.0.26.tgz#a4db818430f66b614200fb41e887b0580a25ad4c"
+  integrity sha512-8YvP6B4VsOw5QWwy0Se0D9wJCKOK4gKi67y2+FMX6Yhbt4yImWnc5vsfhEZaXC6OeTK6uNoy7iaeGgsL2ZThlQ==
 
 "@storybook/addon-storysource@8.2.9":
   version "8.2.9"
