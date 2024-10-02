@@ -29,6 +29,9 @@
     }
   },
   "rules": {
+    "jsx-quotes": ["error", "prefer-single"],
+    "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-undef": "off",
     "func-names": "off",
     "no-ternary": "off",
@@ -64,16 +67,14 @@
     "oxc/no-rest-spread-properties": "off",
     "jest/require-top-level-describe": "off",
     "import/no-useless-path-segments": "off",
-    "jsx-quotes": ["error", "prefer-single"],
     "import/no-extraneous-dependencies": "off",
     "import/no-named-as-default-member": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "unicorn/consistent-function-scoping": "off",
     "unicorn/no-anonymous-default-export": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "tree-shaking/no-side-effects-in-initialization": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
   "overrides": [
     {
