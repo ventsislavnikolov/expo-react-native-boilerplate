@@ -41,6 +41,7 @@
     "linebreak-style": "off",
     "unicorn/no-null": "off",
     "react/prop-types": "off",
+    "no-magic-numbers": "off",
     "no-empty-function": "off",
     "jest/require-hook": "off",
     "import/extensions": "off",
